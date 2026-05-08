@@ -32,7 +32,7 @@ enum ConnectionState: Equatable {
         case .disconnected:    return "Disconnected"
         case .connecting:      return "Connecting..."
         case .connected:       return "Connected"
-        case .error(let msg):  return "Error: \(msg)"
+        case .error(let errorMessage):  return "Error: \(errorMessage)"
         }
     }
 }

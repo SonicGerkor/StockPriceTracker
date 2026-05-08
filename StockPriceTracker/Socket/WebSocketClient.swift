@@ -18,8 +18,8 @@ final class WebSocketClient: NSObject, WebSocketClientProtocol {
     }
     
     private let url: URL
-    private let messageSubject  = PassthroughSubject<String, Never>()
-    private let stateSubject    = CurrentValueSubject<ConnectionState, Never>(.disconnected)
+    private let messageSubject = PassthroughSubject<String, Never>()
+    private let stateSubject = CurrentValueSubject<ConnectionState, Never>(.disconnected)
     private var webSocketTask: URLSessionWebSocketTask?
     private var urlSession: URLSession?
     
@@ -88,4 +88,3 @@ extension WebSocketClient: URLSessionWebSocketDelegate {
         stateSubject.send(.disconnected)
     }
 }
-
