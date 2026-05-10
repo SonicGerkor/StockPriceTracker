@@ -12,6 +12,7 @@ A SwiftUI iOS app that shows live price updates for 25 stocks, powered by a WebS
 - A **Start / Stop** button controls the feed, and a status badge always shows whether you're connected or not
 - Both the List and Detail views update at the same time.
 - Tested in both Light and Dark modes.
+- Localized in English and Spanish.
 
 ---
 
