@@ -29,10 +29,10 @@ enum ConnectionState: Equatable {
     
     var displayTitle: String {
         switch self {
-        case .disconnected:    return "Disconnected"
-        case .connecting:      return "Connecting..."
-        case .connected:       return "Connected"
-        case .error(let errorMessage):  return "Error: \(errorMessage)"
+        case .disconnected:    return String.localized(.disconnected)
+        case .connecting:      return String.localized(.connecting)
+        case .connected:       return String.localized(.connected)
+        case .error(let errorMessage):  return "\(String.localized(.error_prefix))\(errorMessage)"
         }
     }
 }

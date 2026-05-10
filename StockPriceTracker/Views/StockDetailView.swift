@@ -54,8 +54,9 @@ struct StockDetailView: View {
     
     private var descriptionCard: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Label("About", systemImage: "info.circle")
-                .font(.headline)
+            Label(String.localized(.about), systemImage: "info.circle")
+                .font(.title3)
+                .fontWeight(.semibold)
             Text(viewModel.symbol.description)
                 .font(.body)
                 .foregroundStyle(.secondary)
@@ -69,17 +70,17 @@ struct StockDetailView: View {
     
     private var statsCard: some View {
         VStack(spacing: 0) {
-            statRow(label: "Symbol",        value: viewModel.symbol.id)
+            statRow(label: String.localized(.symbol), value: viewModel.symbol.id)
             Divider().padding(.leading)
-            statRow(label: "Current Price", value: viewModel.symbol.price.asCurrency)
+            statRow(label: String.localized(.current_price), value: viewModel.symbol.price.asCurrency)
             Divider().padding(.leading)
-            statRow(label: "Previous Price", value: viewModel.symbol.previousPrice.asCurrency)
+            statRow(label: String.localized(.previous_price), value: viewModel.symbol.previousPrice.asCurrency)
             Divider().padding(.leading)
-            statRow(label: "Change",        value: viewModel.symbol.priceChange.asPriceDelta)
+            statRow(label: String.localized(.change), value: viewModel.symbol.priceChange.asPriceDelta)
             Divider().padding(.leading)
-            statRow(label: "Change %",      value: viewModel.symbol.priceChangePercent.asPercent)
+            statRow(label: String.localized(.change_percent), value: viewModel.symbol.priceChangePercent.asPercent)
             Divider().padding(.leading)
-            statRow(label: "Data Points",   value: "\(viewModel.priceHistory.count)")
+            statRow(label: String.localized(.data_points), value: "\(viewModel.priceHistory.count)")
         }
         .background(Color(.secondarySystemGroupedBackground))
         .clipShape(RoundedRectangle(cornerRadius: 16))

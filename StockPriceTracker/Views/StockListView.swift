@@ -25,7 +25,7 @@ struct StockListView: View {
                     .padding(.vertical, -5)
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("Stock Market")
+            .navigationTitle(String.localized(.markets))
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

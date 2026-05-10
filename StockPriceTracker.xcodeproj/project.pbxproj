@@ -34,7 +34,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				AppContainer.swift,
-				Localization/Localizable.xcstrings,
 				Models/PriceUpdate.swift,
 				Models/StockSymbol.swift,
 				Models/StockUseCases.swift,

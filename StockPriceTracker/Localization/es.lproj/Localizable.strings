@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  StockPriceTracker
+
+  Created by German Battiston on 10/05/2026.
+  
+*/
+
+/* General */
+"markets"               = "Mercados";
+"symbols_count"         = "%d símbolos";
+"symbol"                = "Simbolo";
+"start_feed"            = "Iniciar";
+"stop_feed"             = "Detener";
+"sort_by"               = "Ordenar por";
+
+/* Sort options */
+"sort_price"            = "Precio";
+"sort_change"           = "Variación";
+
+/* Connection states */
+"connected"             = "Conectado";
+"disconnected"          = "Desconectado";
+"connecting"            = "Conectando...";
+"error_prefix"          = "Error: %@";
+
+/* Detail screen */
+"about"                 = "Acerca de";
+"current_price"         = "Precio actual";
+"previous_price"        = "Precio anterior";
+"change"                = "Variación";
+"change_percent"        = "Variación %";
+"data_points"           = "Datos registrados";
+
+/* Accessibility */
+"connection_status"     = "Estado de conexión: %@";

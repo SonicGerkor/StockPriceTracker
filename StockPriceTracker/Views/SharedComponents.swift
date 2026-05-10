@@ -83,7 +83,6 @@ struct ConnectionStatusView: View {
         .padding(.vertical, 4)
         .background(color.opacity(0.1))
         .clipShape(Capsule())
-        .accessibilityLabel("Connection status: \(state.displayTitle)")
     }
 }
 

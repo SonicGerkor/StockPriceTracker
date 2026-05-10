@@ -11,16 +11,16 @@ struct StockRowView: View {
     let symbol: StockSymbol
     
     var body: some View {
-        HStack(spacing: 12) {
-            // Ticker badge
+        HStack(spacing: 15) {
             Text(symbol.id)
-                .font(.system(.headline, design: .monospaced))
-                .frame(width: 56, alignment: .leading)
+                .font(.title3)
+                .fontWeight(.bold)
+                .lineLimit(1)
+                .frame(width: 66, alignment: .leading)
             
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: 8) {
                 Text(symbol.name)
                     .font(.subheadline)
-                    .lineLimit(1)
                 Text(symbol.id)
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -28,13 +28,20 @@ struct StockRowView: View {
             
             Spacer()
             
-            VStack(alignment: .trailing, spacing: 2) {
+            VStack(alignment: .trailing, spacing: 8) {
                 Text(symbol.price.asCurrency)
-                    .font(.system(.subheadline, design: .monospaced).weight(.semibold))
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
                 PriceChangeIndicator(symbol: symbol, style: .compact)
             }
         }
         .padding(.vertical, 4)
         .contentTransition(.numericText())
+    }
+}
+
+#Preview {
+    List {
+        StockRowView(symbol: StockSymbol.seed[0])
     }
 }
