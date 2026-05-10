@@ -5,8 +5,8 @@
 //  Created by German Battiston on 08/05/2026.
 //
 
-import Combine
 import Foundation
+import Combine
 
 /// Concrete repository that:
 /// 1. Manages the WebSocket lifecycle.
@@ -14,7 +14,6 @@ import Foundation
 ///    receives the echo, and applies the update to the local symbol state.
 /// 3. Publishes canonical symbol state to all observers.
 final class StockRepository: StockRepositoryProtocol {
-    
     var symbolsPublisher: AnyPublisher<[StockSymbol], Never> {
         symbolsSubject.eraseToAnyPublisher()
     }
@@ -46,13 +45,13 @@ final class StockRepository: StockRepositoryProtocol {
     func startFeed() {
         webSocketClient.connect()
         
-        // After connecting, tick every 5 seconds to send a price update for a random symbol.
+        // After connecting, tick every second to send a price update for a random symbol.
         tickerCancellable = webSocketClient.statePublisher
             .filter { $0.isConnected }
             .first()
             .flatMap { [weak self] _ -> AnyPublisher<Date, Never> in
                 guard self != nil else { return Empty().eraseToAnyPublisher() }
-                return Timer.publish(every: 5.0, on: .main, in: .common)
+                return Timer.publish(every: 1.0, on: .main, in: .common)
                     .autoconnect()
                     .eraseToAnyPublisher()
             }
@@ -105,4 +104,3 @@ final class StockRepository: StockRepositoryProtocol {
         symbolsSubject.send(Array(symbolsMap.values))
     }
 }
-

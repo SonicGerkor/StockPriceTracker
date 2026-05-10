@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
-struct StockPriceTrackerApp: App {
+struct StockTrackerApp: App {
+    
+    @StateObject private var container = AppContainer.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StockListView(viewModel: container.makeStockListViewModel())
+                .environmentObject(container)
         }
     }
 }

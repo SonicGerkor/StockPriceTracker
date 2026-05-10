@@ -10,7 +10,6 @@ import Combine
 /// Provides a clean API for observing live stock symbols.
 /// Isolates ViewModels from the repository layer.
 final class ObservePriceUpdatesUseCase {
-    
     private let repository: StockRepositoryProtocol
     
     init(repository: StockRepositoryProtocol) {
@@ -26,14 +25,13 @@ final class ObservePriceUpdatesUseCase {
     }
     
     func startFeed() { repository.startFeed() }
-    func stopFeed()  { repository.stopFeed() }
+    func stopFeed() { repository.stopFeed() }
 }
 
 /// Sorts an array of StockSymbol according to the chosen strategy.
 final class SortStocksUseCase {
-    
     enum SortOption: String, CaseIterable, Identifiable {
-        case byPrice       = "Price"
+        case byPrice = "Price"
         case byPriceChange = "Change"
         
         var id: String { rawValue }

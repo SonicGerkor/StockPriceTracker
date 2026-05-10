@@ -5,8 +5,8 @@
 //  Created by German Battiston on 08/05/2026.
 //
 
-import Combine
 import Foundation
+import Combine
 
 final class WebSocketClient: NSObject, WebSocketClientProtocol {
     var messagePublisher: AnyPublisher<String, Never> {

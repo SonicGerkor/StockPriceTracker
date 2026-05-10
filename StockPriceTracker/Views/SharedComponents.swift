@@ -9,7 +9,6 @@ import SwiftUI
 
 /// Displays the price change for a symbol as a coloured pill or inline text.
 struct PriceChangeIndicator: View {
-    
     let symbol: StockSymbol
     
     enum Style { case compact, detailed }
