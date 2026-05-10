@@ -96,10 +96,10 @@ extension Double {
     }
     
     var asPercent: String {
-        String(format: "% +.2f%%", self)
+        String(format: "%+.2f% %", self)
     }
     
     var asPriceDelta: String {
-        String(format: "% +.2f", self)
+        String(format: "%+.2f", self)
     }
 }
