@@ -50,12 +50,20 @@
 			);
 			target = 0521D9122FAE39B400098D8B /* StockPriceTrackerTests */;
 		};
+		0521DA2E2FB267FF00098D8B /* Exceptions for "StockPriceTracker" folder in "StockPriceTracker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0521D9052FAE39B200098D8B /* StockPriceTracker */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0521D9082FAE39B200098D8B /* StockPriceTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				0521DA2E2FB267FF00098D8B /* Exceptions for "StockPriceTracker" folder in "StockPriceTracker" target */,
 				0521D9D32FB104E900098D8B /* Exceptions for "StockPriceTracker" folder in "StockPriceTrackerTests" target */,
 			);
 			path = StockPriceTracker;
@@ -429,9 +437,10 @@
 				DEVELOPMENT_TEAM = XG2KDZWJ9V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StockPriceTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stock Price Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,9 +470,10 @@
 				DEVELOPMENT_TEAM = XG2KDZWJ9V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StockPriceTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stock Price Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
